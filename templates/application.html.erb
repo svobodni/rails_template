@@ -9,14 +9,32 @@
   </head>
 
   <body>
-    <p>
-      <% if current_user %>
-        <pre><%= current_user.inspect%></pre>
-        <%=link_to "Odhlásit", '/sessions/destroy' %>
-      <% else %>
-        <%=link_to "LOGIN", '/auth/registr' %>
-      <% end %>
-    </p>
-    <%= yield %>
+    <div class="container">
+      <div class="header">
+        <!-- <ul class="nav nav-pills pull-right">
+          <li><a href="/">Úvod</a></li>
+          <li class="active"><a href="jeden.html">Jeden</a></li>
+          <li><a href="dva.html">Dva</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul> -->
+        <a class="navbar-brand" rel="home" href="#" title="Svobodní">
+          <img src="/images/02_SVOBODNI_logo_tagline.png">
+        </a>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-sm-12">
+          <p>
+            <% if current_user %>
+              <pre><%= current_user.inspect%></pre>
+              <%=link_to "Odhlásit", '/sessions/destroy' %>
+            <% else %>
+              <%=link_to "LOGIN", '/auth/registr' %>
+            <% end %>
+          </p>
+          <%= yield %>
+        </div>
+      </div>
   </body>
 </html>

@@ -1,0 +1,165 @@
+
+$icon-font-path: '../fonts/';
+
+$brand-primary:         #00654E; //darken(#00654E, 6.5%);
+$svobodni-lighter:      #C9DAD5;
+$svobodni-secondary:    #6C2D7A;
+
+$headings-color:        $brand-primary;
+
+$font-family-base:      "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family:  "Roboto-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base:        14px;
+$font-size-h1:          floor(($font-size-base * 2.4)) !default; // ~36px
+$font-size-h2:          floor(($font-size-base * 1.6)) !default; // ~30px
+$font-size-h3:          ceil(($font-size-base * 1.2)) !default; // ~24px
+$panel-bg:              $svobodni-lighter;
+
+// bower:scss
+@import "bootstrap-sprockets";
+@import "font-awesome";
+@import "bootstrap";
+//@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.navbar-brand img {
+  height: 100px;
+  margin-top: -20px;
+  margin-left: -35px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2.bottom {
+  color: $svobodni-secondary;
+}
+
+.panel-default {
+  padding: 0px 20px 20px 20px;
+}
+
+.perex {
+  font-size:      floor(($font-size-base * 1.4));
+  color:          $brand-primary;
+}
+
+.content {
+  ol, ul {
+    counter-reset: level1;
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0;
+  }
+
+  ul li:before {
+    font-size: $font-size-h3;
+    color: $brand-primary;
+    margin-right: 14px;
+    content: "\002022";
+  }
+
+  ol li:before {
+    color: $brand-primary;
+    content: counter(level1) ") "; /*Instead of ". " */
+    counter-increment: level1;
+    margin-right: 8px;
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  img.sign {
+    width: 100px;
+    // height: 10px;
+    padding-top: 20px;
+  }
+
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  border-top: 15px solid #00654e;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.content,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  min-height: 90px;
+}
+
+/* Custom page footer */
+.footer {
+  margin-top: 20px;
+  padding-top: 19px;
+  margin-left: 14px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  // img.sign {
+  //   // width: 100px;
+  //   padding: 10%;
+  // }
+
+
+  /* Remove the padding we set earlier */
+  .header,
+  .content,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+  .footer {
+    ol, ul {
+      list-style: none;
+      margin-left: 0px;
+      padding-left: 0;
+    }
+  }
+
+  .content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer .row div{
+    border-left: 1px solid $brand-primary;
+    margin-bottom: 19px;
+    min-height: 50px;
+  }
+}
