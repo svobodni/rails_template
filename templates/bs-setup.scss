@@ -1,14 +1,14 @@
 
 $icon-font-path: '../fonts/';
 
-$brand-primary:         #00654E; //darken(#00654E, 6.5%);
+$brand-primary:         #009681; //darken(#00654E, 6.5%);
 $svobodni-lighter:      #C9DAD5;
 $svobodni-secondary:    #6C2D7A;
 
 $headings-color:        $brand-primary;
 
-$font-family-base:      "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$headings-font-family:  "Roboto-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base:      "Montserrat", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family:  "Montserrat-Bold", "Roboto-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-size-base:        14px;
 $font-size-h1:          floor(($font-size-base * 2.4)) !default; // ~36px
 $font-size-h2:          floor(($font-size-base * 1.6)) !default; // ~30px
@@ -23,9 +23,9 @@ $panel-bg:              $svobodni-lighter;
 // endbower
 
 .navbar-brand img {
-  height: 100px;
-  margin-top: -20px;
-  margin-left: -35px;
+  height: 50px;
+  // margin-top: -20px;
+  // margin-left: -35px;
 }
 
 h1, h2 {
@@ -88,7 +88,7 @@ h2.bottom {
 
 /* Space out content a bit */
 body {
-  border-top: 15px solid #00654e;
+  border-top: 15px solid $brand-primary;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: justify;

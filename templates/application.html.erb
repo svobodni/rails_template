@@ -18,23 +18,65 @@
           <li><a href="shop.html">Shop</a></li>
         </ul> -->
         <a class="navbar-brand" rel="home" href="#" title="Svobodní">
-          <img src="/images/02_SVOBODNI_logo_tagline.png">
+          <%= image_tag "Svobodni_logo_RGB.jpg" %>
         </a>
       </div>
 
       <div class="content">
         <div class="row">
           <div class="col-sm-12">
-          <p>
-            <% if current_user %>
-              <pre><%= current_user.inspect%></pre>
-              <%=link_to "Odhlásit", '/sessions/destroy' %>
-            <% else %>
-              <%=link_to "LOGIN", '/auth/registr' %>
-            <% end %>
-          </p>
-          <%= yield %>
+            <p>
+              <% if current_user %>
+                <pre><%= current_user.inspect%></pre>
+                <%=link_to "Odhlásit", '/sessions/destroy' %>
+              <% else %>
+                <%=link_to "LOGIN", '/auth/registr' %>
+              <% end %>
+            </p>
+            <%= yield %>
+          </div>
+        </div>
+
+        <!-- <h2 id="pridejte-se">PŘIDEJTE SE KE SVOBODNÝM</h2>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Staňte se členem</h3>
+            <p>Nelíbí se vám politika dosavadních parlamentních stran? Také si myslíte, že se v&nbsp;mnoha ohledech vracíme zpět? Že svoboda je stále menší? Že státní moc, která vám každý den mluví do toho, co smíte a co nesmíte, je stále silnější? Můžete se rozčilovat u zpráv, na sociálních sítích, nebo v&nbsp;hospodách. Zítra to bude stejné. Jedinou šancí na skutečnou změnu je osobní účast v&nbsp;boji s&nbsp;politickými protivníky. My Svobodní nechceme žít v&nbsp;socialismu. Věříme, že vy také ne. Zároveň víme, že pomocnou ruku najdeme na konci vlastních paží, a že více svobody za nás nikdo jiný nezařídí. Začněte počítat s&nbsp;námi. Stát patří nám, ne my jemu. Staňte se členy Svobodných a pomozte nám i sobě na naší společné cestě do sněmovny v&nbsp;roce 2017. Děkujeme.</p>
+            <a href="https://web.svobodni.cz/registrace/stat-se-clenem" class="btn btn-primary btn-block" onclick="trackOutboundLink('https://web.svobodni.cz/registrace/stat-se-clenem'); return false;">Přihláška člena</a>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Staňte se příznivcem</h3>
+            <p>Nespokojte se s&nbsp;odevzdáním svého hlasu ve volbách jen jednou za čas, staňte se příznivcem Svobodných. Jako registrovaný příznivec máte možnost ovlivnit, kdo bude za Svobodné kandidovat. Budeme vás také pravidelně informovat o&nbsp;tom, co se ve Svobodoných děje.</p>
+            <a href="https://web.svobodni.cz/registrace/stat-se-priznivcem" class="btn btn-primary btn-block" onclick="trackOutboundLink('hhttps://web.svobodni.cz/registrace/stat-se-priznivcem'); return false;">Přihláška příznivce</a>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="footer">
+        <div class="row">
+          <div class="col-sm-4">
+            <ul>
+              <li><a href="https://web.svobodni.cz">www.svobodni.cz</a></li>
+              <li><a mailto="kancelar@svobodni.cz">kancelar@svobodni.cz</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul>
+              <li><a href="https://eshop.svobodni.cz">eshop.svobodni.cz</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul>
+              <li><a href="https://prispet.svobodni.cz/" onclick="trackOutboundLink('https://prispet.svobodni.cz/'); return false;">Darujte prosím</a></li>
+              <li><a href="https://web.svobodni.cz/registrace/stat-se-clenem" onclick="trackOutboundLink('https://web.svobodni.cz/registrace/stat-se-clenem'); return false;">Staňte se členem</a></li>
+              <li><a href="https://web.svobodni.cz/registrace/stat-se-priznivcem" onclick="trackOutboundLink('hhttps://web.svobodni.cz/registrace/stat-se-priznivcem'); return false;">Staňte se příznivcem</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
   </body>
 </html>

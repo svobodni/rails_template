@@ -48,6 +48,7 @@ def bootstrap
   run 'bundle'
   copy_file "templates/application.js", "app/assets/javascripts/application.js"
   copy_file "templates/bs-setup.scss", "app/assets/stylesheets/bs-setup.scss"
+  copy_file "templates/Svobodni_logo_RGB.jpg", "app/assets/images/Svobodni_logo_RGB.jpg"
   #   gsub_file 'app/assets/stylesheets/application.css', "*= require_tree .", "@import \"bootstrap-sprockets\"
   # @import \"bootstrap\""
   #   gsub_file '', "//= require jquery", "//= require .bootstrap-sprockets"
