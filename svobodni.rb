@@ -7,9 +7,17 @@ after_bundle do
   git add: "."
   git commit: %Q{ -m 'Rails generated skeleton' }
 
+  czech
   oauth
   bootstrap
   welcome
+end
+
+def czech
+  copy_file "templates/cs.yml", "config/locales/cs.yml"
+  environment 'config.i18n.default_locale = :cs'
+  git add: "."
+  git commit: %Q{ -m 'Added czech locale' }
 end
 
 def oauth
@@ -32,7 +40,7 @@ def oauth
   copy_file "templates/error.rb", "lib/oauth2/error.rb"
 
   generate('configatron:install')
-  copy_file "templates/development.rb", "config/configatron/development.rb", {force: true}
+  copy_file "templates/development.rb", "config/configatron/development.rb"
 
   route "get '/auth/:provider/callback', to: 'sessions#create'"
   route "get '/sessions/destroy'"
