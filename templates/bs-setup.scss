@@ -22,7 +22,7 @@ $panel-bg:              $svobodni-lighter;
 //@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.navbar-brand img {
+.logo img {
   height: 50px;
   // margin-top: -20px;
   // margin-left: -35px;
@@ -104,7 +104,7 @@ body {
 
 /* Custom page header */
 .header {
-  min-height: 90px;
+  min-height: 70px;
 }
 
 /* Custom page footer */
@@ -136,7 +136,7 @@ body {
 
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */

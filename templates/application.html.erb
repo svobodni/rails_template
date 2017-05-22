@@ -11,28 +11,25 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- <ul class="nav nav-pills pull-right">
-          <li><a href="/">Úvod</a></li>
-          <li class="active"><a href="jeden.html">Jeden</a></li>
-          <li><a href="dva.html">Dva</a></li>
-          <li><a href="shop.html">Shop</a></li>
-        </ul> -->
-        <a class="navbar-brand" rel="home" href="#" title="Svobodní">
+        <a class="logo" rel="home" href="#" title="Svobodní">
           <%= image_tag "Svobodni_logo_RGB.jpg" %>
         </a>
+        <ul class="nav navbar-nav nav-pills pull-right">
+          <li>
+            <% if current_user %>
+              <%= link_to current_user["name"], "https://registr.svobodni.cz/people/#{current_user['id']}" %></li><li>
+              <%=link_to "Odhlásit", '/sessions/destroy', class: "pull-right" %>
+            <% else %>
+              <%=link_to "LOGIN", '/auth/registr', class: "pull-right" %>
+            <% end %>
+          </li>
+        </ul>
       </div>
 
       <div class="content">
         <div class="row">
           <div class="col-sm-12">
-            <p>
-              <% if current_user %>
-                <pre><%= current_user.inspect%></pre>
-                <%=link_to "Odhlásit", '/sessions/destroy' %>
-              <% else %>
-                <%=link_to "LOGIN", '/auth/registr' %>
-              <% end %>
-            </p>
+
             <%= yield %>
           </div>
         </div>
