@@ -68,5 +68,6 @@ end
 def welcome
   copy_file "templates/application.html.erb", "app/views/layouts/application.html.erb"
   generate(:controller, "welcome ahoj")
+  copy_file "templates/ahoj.html.erb", "app/views/welcome/ahoj.html.erb"
   route "root to: 'welcome#ahoj'"
 end
